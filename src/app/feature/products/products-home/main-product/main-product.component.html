@@ -1,0 +1,26 @@
+<button (click)="backButtonClicked()">Back</button>
+<div id="mydivprofile" class="profile-pic p-relative">
+        <div >  <img src="{{userSelectedProduct.imageUrl}}"></div>
+        </div>
+
+  <br/>
+  <div class="productNameDetails">
+        <div style ="font-weight: bold;"> {{userSelectedProduct.name}}</div>
+ 
+        <br/>
+        {{userSelectedProduct.brand}}
+        <br/>
+        $ {{userSelectedProduct.price}}
+        <br/>
+       comp. value : ${{userSelectedProduct.compValue}}
+              <br/>
+      
+              Rating : {{userSelectedProduct.rating}}
+              <br/>
+              Colors Available : 
+              <div *ngFor="let color of userSelectedProduct.colors">
+                      {{color.displayName}}
+              </div>
+  </div>
+
+

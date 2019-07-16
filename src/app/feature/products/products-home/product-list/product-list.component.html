@@ -1,0 +1,29 @@
+<div class="productsListContainer">
+  <div *ngFor="let product of productsList" class="productsList">
+    <div (click)="showSelectedProduct(product)">
+
+      <div id="mydivprofile" class="profile-pic p-relative">
+        <div class="productImage"> <img src="{{product.imageUrl}}" /></div>
+      </div>
+
+      <br />
+      <div class="productDetails">
+        <div style="font-weight: bold;"> {{product.name}}</div>
+
+        <br />
+        {{product.brand}}
+        <br />
+        $ {{product.price}}
+        <br />
+        comp. value : ${{product.compValue}}
+        <br />
+        Rating : {{product.rating}}
+        <br />
+        Colors Available:
+        <span *ngFor="let color of product.colors">
+          {{color.displayName}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

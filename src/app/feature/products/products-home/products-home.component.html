@@ -1,0 +1,45 @@
+<div class="top-main-nav">
+    <nav class="navbar">
+        <div>
+            <div class="navbar-header  headerLogo">
+                <a class="navbar-brand">
+                <img src="assets/logo.png" alt="Logo" class="hidden-xs-screen">
+               </a>
+               <ul class="icons-position">
+                    <li>
+                        <img src="assets/account.gif" alt="Account" class="hidden-sm hidden-xs">
+                    </li>
+                    <li>
+                        <img src="assets/store.gif" alt="Store" class="hidden-sm hidden-xs">
+                    </li>
+                    <li class="hidden-desktop">
+                        <img src="assets/logo_brand.jpeg" alt="Logo">
+                    </li>
+                    <li>
+                        <img src="assets/search.gif" alt="Search" class="hidden-sm hidden-xs">
+                    </li>
+                    <li>
+                        <img src="assets/bag.gif" alt="Bag" class="hidden-sm hidden-xs">
+                    </li>
+                </ul>
+            </div>
+               <div class="menuItems">
+                   <span>WOMEN</span>
+                   <span>MEN</span>
+                   <span>KIDS</span>
+                   <span>ACCESSORIES</span>
+                   <span>CLEARANCE</span>
+                   <span>BRANDS</span>
+               </div>
+            <hr/>
+            <div class="navbar-header">
+                    <a class="navbar-brand headerHeading">
+                            Shop for men's oxford shoes online at DSW, where we carry a variety of dress and casual oxford styles such as wingtips and cap toe shoes in leather, suede, and other materials.
+                    </a>
+                </div>
+            <hr/>
+            </div>
+    </nav>
+</div>
+<app-product-list *ngIf="!showProductPage" (selectProductEvent)="selectProductEvent($event)"></app-product-list>
+<app-main-product *ngIf="showProductPage" [userSelectedProduct] = "userSelectedProduct" (backButtonEvent) = "backButtonClicked($event)"></app-main-product>
